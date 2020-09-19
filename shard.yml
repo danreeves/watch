@@ -1,0 +1,12 @@
+name: watch
+version: 0.1.0
+
+description: |
+  Watch your files and run commands on changes from a crystal script
+
+authors:
+  - Dan Reeves <hey@danreev.es>
+
+crystal: 0.35.1
+
+license: MIT
