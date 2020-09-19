@@ -19,7 +19,7 @@ Watch your files and run commands on changes from a crystal script
 ```crystal
 require "watch"
 
-Watch.watch "./src/**.*.cr", "crystal build src/main.cr"
+Watch.watch "./src/**/*.cr", "crystal build src/main.cr"
 Watch.watch "./*", "echo \"wow a file changed\"", opts: [:verbose, :log_changes]
 Watch.run
 ```
