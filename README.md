@@ -1,6 +1,6 @@
 # ![watch](./head.png)
 
-Watch your files and run commands on changes from a crystal script
+**Watch your files and run commands on changes from a crystal script**
 
 ## Installation
 
