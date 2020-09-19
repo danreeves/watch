@@ -30,14 +30,14 @@ Now you can run it with `crystal run watch.cr` and rebuild your main application
 
 Every `Watch.watch` is run in it's own Fiber so you can have multiple tasks doing different things looking at different files.
 
-## `Watch.watch(glob: String, command: String, opts: [], interval: Int32)`
+### `Watch.watch(glob: String, command: String, opts: [], interval: Int32)`
 
 `watch` takes a glob of files to watch and a command to run. Configuration is provided by `opts` and includes:
   - `:on_start`: Run the command immediately as well as on file changes
   - `:log_changes`: Print a message when a file changes
   - `:verbose`: Increases the verbosity of the message to includes how many files changed and whether they were new files, deletions, or changes.
 
-## `Watch.run`
+### `Watch.run`
 
 Required to be called at the end of your watch script to prevent the process for finishing.
 
