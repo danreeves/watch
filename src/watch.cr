@@ -3,7 +3,7 @@ require "process"
 require "colorize"
 
 module Watch
-  VERSION = "1.0.0"
+  VERSION = "1.0.1"
 
   private def self.children_of(pid : Int64)
     pids = [pid] of Int64
@@ -41,7 +41,7 @@ module Watch
       process = nil
       if opts.includes?(:on_start)
         puts "> running \"#{command} #{args.join(" ")}\"".colorize(:green)
-        process = Process.new(command, args, output: stdout)
+        process = Process.new(command, args, output: stdout, error: stdout)
       end
 
       # Collect the list of current files watched
@@ -100,7 +100,7 @@ module Watch
               diff = [added, changed, removed].join(", ")
               puts ">> #{diff}"
             else
-            puts ">> #{all_changed.size} changes".colorize(:yellow)
+              puts ">> #{all_changed.size} changes".colorize(:yellow)
             end
           end
 
@@ -111,7 +111,7 @@ module Watch
           end
 
           puts "> running \"#{command} #{args.join(" ")}\"".colorize(:green)
-          process = Process.new(command, args, output: stdout)
+          process = Process.new(command, args, output: stdout, error: stdout)
         end
 
         sleep interval
