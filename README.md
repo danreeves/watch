@@ -26,9 +26,9 @@ Watch.watch "./*", "echo \"wow a file changed\"", opts: [:verbose, :log_changes]
 Watch.run
 ```
 
-Now you can run it with `crystal run watch.cr` and rebuild your main application whenever a file changes. Useful for webservers like Kemal!
+Now you can run it with `crystal watch.cr` and rebuild your main application whenever a file changes. Useful for webservers like Kemal!
 
-Every `Watch.watch` is run in it's own Fiber so you can have multiple tasks doing different things looking at different files.
+Every `Watch.watch` command is run in it's own Fiber so you can have multiple tasks running different commands while watching different files.
 
 ### `Watch.watch(glob: String, command: String, opts: [], interval: Int32)`
 
@@ -39,7 +39,7 @@ Every `Watch.watch` is run in it's own Fiber so you can have multiple tasks doin
 
 ### `Watch.run`
 
-Required to be called at the end of your watch script to prevent the process for finishing.
+*Required* to be called at the end of your watch script
 
 ## Contributing
 
