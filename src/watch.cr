@@ -29,7 +29,7 @@ module Watch
     return pids
   end
 
-  def self.watch(glob, full_command, opts = [] of ElementType, interval = 0.1)
+  def self.watch(glob, full_command, opts = [] of Symbol, interval = 0.1)
     spawn do
       files = Dir.glob(glob).to_set
       timestamps = {} of String => Time

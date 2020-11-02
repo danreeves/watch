@@ -1,9 +1,10 @@
 require "./spec_helper"
 
 describe Watch do
-  # TODO: Write tests
-
-  it "works" do
-    false.should eq(true)
+  it "runs the command immediately with :on_start opt" do
+    run "initial" do
+      wait_until_stdout "> running \"echo yup\""
+      wait_until_stdout "\nyup"
+    end
   end
 end
