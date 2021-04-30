@@ -1,5 +1,5 @@
 name: watch
-version: 1.0.1
+version: 1.0.2
 
 description: |
   Watch your files and run commands on changes from a crystal script
@@ -7,6 +7,6 @@ description: |
 authors:
   - Dan Reeves <hey@danreev.es>
 
-crystal: 0.35.1
+crystal: ">= 0.35"
 
 license: MIT

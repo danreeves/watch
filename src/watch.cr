@@ -3,7 +3,7 @@ require "process"
 require "colorize"
 
 module Watch
-  VERSION = "1.0.1"
+  VERSION = "1.0.2"
 
   private def self.children_of(pid : Int64)
     pids = [pid] of Int64
