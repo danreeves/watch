@@ -7,7 +7,7 @@ module Watch
 
   private def self.children_of(pid : Int64)
     pids = [pid] of Int64
-    output = `ps ao pid,ppid`.split('\n')
+    output = `ps -o pid,ppid`.split('\n')
     output.delete_at(0)
     output = output.map do |line|
       line.split(' ').map do |col|
