@@ -1,5 +1,5 @@
 name: watch
-version: 1.0.2
+version: 1.0.3
 
 description: |
   Watch your files and run commands on changes from a crystal script
